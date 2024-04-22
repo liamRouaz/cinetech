@@ -1,0 +1,38 @@
+/* VARIABLES CSS */
+:root {
+    --bg-colors : #FF3131;
+    --color-primary : #f3f3f3;
+    --color-secondary: #333;
+}
+
+
+/* RESET */
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STYLES GENERALES */
+nav{
+    background-color: var(--bg-colors);
+}
+
+.color-white {
+    color: var(--color-primary);
+
+}
+
+#films {
+    display: flex;
+    gap: 20px;
+}
+
+img {
+    width: 450px;
+    height: auto;
+}
+
+#films > *  {
+    width: 550px ;
+}
