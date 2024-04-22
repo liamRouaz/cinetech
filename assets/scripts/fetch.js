@@ -11,7 +11,7 @@ fetch(api)
         filmElement.innerHTML = `
             <h2>${film.title}</h2>
             <img src="https://image.tmdb.org/t/p/w500/${film.poster_path}" alt="${film.title} Poster">
-            <p>${film.overview}</p>
+           
         `;
         filmsContainer.appendChild(filmElement);
     });
