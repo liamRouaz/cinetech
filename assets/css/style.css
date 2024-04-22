@@ -14,6 +14,10 @@
 }
 
 /* STYLES GENERALES */
+
+h2 {
+    font-size: 1em;
+}
 nav{
     background-color: var(--bg-colors);
 }
@@ -26,10 +30,11 @@ nav{
 #films {
     display: flex;
     gap: 20px;
+    padding: 10px;
 }
 
 img {
-    width: 450px;
+    width: 250px;
     height: auto;
 }
 
