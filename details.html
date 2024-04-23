@@ -6,17 +6,18 @@
     <title>Détail</title>
 </head>
 <body>
-<main>
+<main>   
+    <h1>Détails</h1>
+    <!-- affichage des films dans la page web -->
+    <div id="films"></div>
     <section class="infos">
-        <div id="realisateur">realisateur: </div>
-        <div id="type">type: </div>
-        <div id="pays">pays: </div>
+        <div id="type">langue: </div>
+        <div id="pays">pays d'origine: </div>
         <div id="resume">résumé: </div>
+        <div id="popularity">popularité: </div>
+        <div class="details" id="details-${film.id}"></div> 
     </section>
 
-
-   <!-- affichage des films dans la page web -->
-   <div id="films"></div>
 </main>
 <script src="script.js"></script>
 <script src="detail.js"></script>
