@@ -1,8 +1,7 @@
 const maConst = '8c4b867188ee47a1d4e40854b27391ec';
-const api = 'https://api.themoviedb.org/3/discover/tv?api_key=' + maConst;
+const apiUrl = 'https://api.themoviedb.org/3/discover/tv?api_key=' + maConst;
 
-
-fetch(api)
+fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
         const filmsContainer = document.getElementById('films');
@@ -16,10 +15,31 @@ fetch(api)
                     <div class="card-body">
                         <h5 class="card-title">${film.title}</h5>
                         <p class="card-text">${film.overview}</p>
+                        <button class="btn btn-primary showDetailsBtn" data-id="${film.id}">Voir les détails</button>
+                        <div class="details" style="display: none;">
+                            <p><strong>Date de sortie:</strong> ${film.release_date}</p>
+                            <p><strong>Note moyenne:</strong> ${film.vote_average}</p>
+                            <!-- Ajoutez d'autres détails du film ici -->
+                        </div>
                     </div>
                 </div>
             `;
             filmsContainer.appendChild(filmElement);
+        });
+
+        // Ajouter un écouteur d'événements à chaque bouton "Voir les détails"
+        const showDetailsBtns = document.querySelectorAll('.showDetailsBtn');
+        showDetailsBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const detailsDiv = this.parentNode.querySelector('.details');
+                if (detailsDiv.style.display === 'none') {
+                    detailsDiv.style.display = 'block';
+                    this.textContent = 'Cacher les détails';
+                } else {
+                    detailsDiv.style.display = 'none';
+                    this.textContent = 'Voir les détails';
+                }
+            });
         });
     })
     .catch(error => {
