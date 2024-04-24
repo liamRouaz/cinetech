@@ -20,7 +20,14 @@ fetch(apiUrl)
                             <p><strong>Résumé:</strong> <span class="summary"></span></p>
                             <p><strong>Date de sortie:</strong> ${film.release_date}</p>
                             <p><strong>Note moyenne:</strong> ${film.vote_average}</p>
-                            <!-- Ajoutez d'autres détails du film ici -->
+                            <form class="commentForm">
+                                <div class="form-group">
+                                    <label for="comment">Ajouter un commentaire:</label>
+                                    <textarea class="form-control" id="comment" rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Soumettre</button>
+                            </form>
+                            <div class="comments"></div>
                         </div>
                     </div>
                 </div>
@@ -52,6 +59,26 @@ fetch(apiUrl)
                 } else {
                     detailsDiv.style.display = 'none';
                     this.textContent = 'Voir les détails';
+                }
+            });
+        });
+
+        // Ajouter un écouteur d'événements pour les formulaires de commentaire
+        const commentForms = document.querySelectorAll('.commentForm');
+        commentForms.forEach(form => {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const commentInput = this.querySelector('#comment');
+                const commentText = commentInput.value.trim();
+                if (commentText !== '') {
+                    const commentsDiv = this.parentNode.querySelector('.comments');
+                    const commentElement = document.createElement('div');
+                    commentElement.classList.add('comment');
+                    commentElement.textContent = commentText;
+                    commentsDiv.appendChild(commentElement);
+                    commentInput.value = ''; // Effacer le champ de commentaire après l'ajout
+                } else {
+                    alert('Veuillez entrer un commentaire.');
                 }
             });
         });
