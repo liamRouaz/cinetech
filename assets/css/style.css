@@ -24,20 +24,34 @@ nav{
 
 .color-white {
     color: var(--color-primary);
-
 }
 
+/* Conteneur pour le carrousel de films */
 #films {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Ajout de l'espace entre les films */
     padding: 10px;
 }
 
-img {
-    width: 250px;
-    height: auto;
+/* Conteneur pour le carrousel de séries */
+#series {
+    width: 450px; /* Largeur fixe des séries */
+    margin: 0 auto; /* Centrage horizontal */
 }
 
-#films > *  {
-    width: 550px ;
+/* Image des films */
+#films > * img {
+    width: 100%; /* Utilisation de toute la largeur du conteneur */
+    height: auto; /* Hauteur automatique pour préserver les proportions */
+}
+
+/* Image des séries */
+#series img {
+    width: 100%; /* Utilisation de toute la largeur du conteneur */
+    height: auto; /* Hauteur automatique pour préserver les proportions */
+}
+
+/* Styling pour les slides Slick.js */
+.slick-slide img {
+    width: 100%;
 }
