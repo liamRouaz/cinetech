@@ -12,15 +12,37 @@
 <body>
     <header div class="p-3 mb-2 bg-warning text-dark".bg-warning>
         <h1 class="text-white".text-white>My Cinetech</h1>
-     <!-- autocompletion -->
-     <div id="searchResults"></div>
-     <input type="text" id="searchInput" placeholder="Search movies...">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand color-white" href="#">CINETECH</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link color-white" aria-current="page" href="index.html">Accueil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link color-white" href="Film.html">Films</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link color-white" href="Serie.html">Séries</a>
+                  </li>
+                </ul>
+                <div id="searchResults"></div>
+         <input type="text" id="searchInput" placeholder="film ou serie">
+         
+              </div>
+            </div>
+          </nav>
     </header>
     
     
    <!-- affichage des films dans la page web -->
    <div class="container">
     <div class="row" id="films"></div>
+    
 </div>
     <script src="./script.js"></script>
     <script src="./search.js"></script>
