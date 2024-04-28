@@ -1,5 +1,5 @@
 const maConst = '8c4b867188ee47a1d4e40854b27391ec';
-const apiUrl = 'https://api.themoviedb.org/3/discover/tv?api_key=' + maConst;
+const apiUrl = 'https://api.themoviedb.org/3/discover/tv?language=fr-FR&api_key=' + maConst;
 
 fetch(apiUrl)
     .then(response => response.json())
@@ -13,7 +13,7 @@ fetch(apiUrl)
                 <div class="card">
                     <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/${film.poster_path}" alt="${film.title} Poster">
                     <div class="card-body">
-                        <h5 class="card-title">${film.title}</h5>
+                        <h5 class="card-title">${film.name}</h5>
                         <p class="card-text">${film.overview}</p>
                         <button class="btn btn-primary showDetailsBtn" data-id="${film.id}">Voir les détails</button>
                         <div class="details" style="display: none;">
