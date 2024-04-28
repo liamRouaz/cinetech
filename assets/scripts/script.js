@@ -1,5 +1,5 @@
 const maConst = '8c4b867188ee47a1d4e40854b27391ec';
-const apiUrl = 'https://api.themoviedb.org/3/discover/movie?api_key=' + maConst;
+const apiUrl = 'https://api.themoviedb.org/3/discover/movie?language=fr-FR&api_key=' + maConst;
 
 fetch(apiUrl)
     .then(response => response.json())
@@ -34,7 +34,7 @@ fetch(apiUrl)
             filmsContainer.appendChild(filmElement);
 
             //récupérer le résumé du film et l'ajouter dans les détails
-            fetch(`https://api.themoviedb.org/3/movie/${film.id}?api_key=${maConst}&language=fr`)
+            fetch(`https://api.themoviedb.org/3/movie/${film.id}?language=fr-FR&api_key=${maConst}`)
                 .then(response => response.json())
                 .then(movieData => {
                     const summary = movieData.overview;
