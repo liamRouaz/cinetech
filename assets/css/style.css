@@ -1,0 +1,82 @@
+/* VARIABLES CSS */
+:root {
+    --bg-colors : #FF3131;
+    --color-primary : #f3f3f3;
+    --color-secondary: #333;
+}
+
+
+/* RESET */
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #919191;
+}
+
+main {
+    margin-bottom: 30px;
+}
+
+/* STYLES GENERALES */
+
+h2 {
+    font-size: 1em;
+}
+nav{
+    background-color: var(--bg-colors);
+}
+
+.color-white {
+    color: var(--color-primary);
+}
+
+/* Conteneur pour le carrousel de films */
+#films {
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Conteneur pour le carrousel de séries */
+#series {
+    width: 1050px; 
+    
+    margin: 0 auto; 
+}
+
+/* Image des films */
+#films > * img {
+    width: 100%; 
+    height: auto;
+}
+#films * {
+    margin: 0 10px;
+}
+
+/* Image des séries */
+#series img {
+    width: 100%; 
+    height: auto; 
+}
+
+#series * {
+    margin: 0 10px
+}
+
+/* Styling pour les slides Slick.js */
+.slick-slide img {
+    width: 100%;
+}
+
+
+/* page Films */
+
+#filmsPage, #seriePage {
+    margin-top: 20px;
+}

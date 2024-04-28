@@ -1,0 +1,78 @@
+/* VARIAVLE CSS */
+:root {
+    --bg-color : #333;
+    --txt-color : #f3f3f3;
+    --primary-color :  #b12323;
+    
+}
+
+/* RESET NAVIGATEUR */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    list-style: none;
+}
+
+
+/* STYLE GLOBAL */
+
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+.navlink {
+    display: flex;
+   
+    gap: 10px;
+}
+
+.nav-item {
+    color: var(--txt-color);
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* MAIN */
+.first-btn{
+    margin-right: 20px;
+}
+
+.main-index {
+    padding: 20px;
+}
+
+#home {
+    display: flex;
+    height: 100vh;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* inscription */
+
+#main-inscript, #main-connexion {
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+    
+    height: calc(100vh - 100px);
+}
