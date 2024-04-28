@@ -41,9 +41,10 @@ fetch(serieApi)
 
         data.results.forEach(serie => {
             const serieElement = document.createElement('div');
-            serieElement.classList.add('col-md-4', 'mb-4'); // Classes Bootstrap pour colonne et marges
+            
             serieElement.innerHTML = `
                 <div class="card">
+        
                     <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/${serie.poster_path}" alt="${serie.title} Poster">
                 </div>
             `;
